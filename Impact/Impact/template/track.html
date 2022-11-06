@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mapouter{
+            height: 230px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+   <!--- <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=delhi%20hospitals&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" frameborder="0" scrolling="no" style="width: 600px; height: 400px;"></iframe><a href="https://blooket.app/host" style="display:none">blooket host</a><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}</style><style>.gmap_canvas{overflow:hidden;background:none!important;height:400px;width:600px;}</style></div></div>
+--> <div id="map"></div>
+<div id="details"></div>
+        <script>         
+        var reqcount =0;
+        navigator.geolocation.watchPosition(successCallback, errorCallback, options);
+        function successCallback(position) {
+            const {accuracy, latitude, longitude, altitude, heading, speed } = position.coords;
+            // Show a map centered at Latitude / Longitude.
+            map.innerHTML='<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
+            reqcount++;
+            details. innerHTML = "Accuracy: "+accuracy+"<br>";
+            details. innerHTML += "Latitude: "+latitude+" | Longitude: "+longitude+"<br>";
+            details. innerHTML += "Altitude: "+altitude+"<br>";
+            details. innerHTML += "Heading: "+heading+"<br>";
+            details. innerHTML += "Speed: "+speed+"<br>";
+            details. innerHTML += "reqcount: "+reqcount;
+            }
+                                                            
+        function errorCallback (error)
+    {
+    
+    }
+    var options ={
+        enableHighAccuracy: false,
+         timeout: 5000,
+        maximumAge:0
+    };             
+    </script>
+</body>
+
+</html>

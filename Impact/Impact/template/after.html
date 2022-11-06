@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        {% if data==0 %}
+        <h1 class="dead">YOU ARE LEAST LIKELY TO SUFFER FROM FUNGAL INFECTION</h1>
+        {% elif data==1 %}
+        <h1 class="alive">YOU MAY BE SUFFERING FROM FUNGAL INFECTION. CONSULT A DOCTOR</h1>
+        {% else %}
+        <h1>YOU HAVE A VERY HIGH POSSIBLITY OF SUFFERING FROM FUNGAL INFECTION</h1>
+        {%endif%}
+    </center>
+</body>
+</html>
