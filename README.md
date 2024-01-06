@@ -1,4 +1,4 @@
-# HACKCBS
+# MEDI-DESK
 ##### The driver files are in the master branch #####
 Problem statement-
 As from the surveys we get to know that people has to search for different websites for different services….which somehow makes the whole process of medication tiresome.
