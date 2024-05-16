@@ -59,7 +59,7 @@ def home2():
     return render_template('after2.html',data=ans)   
 @app.route('/predict3',methods=['POST'])
 def home3():
-    data1= request.form['cough']
+    data1= request.form['paragraph_text']
     data2= request.form['fever']
     data3= request.form['sore']
     data4= request.form['sob']
